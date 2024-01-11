@@ -12,4 +12,5 @@ import { HeroesComponent } from './heroes/heroes.component';
 })
 export class AppComponent {
   title = 'app-angular';
+  buttonPlaceholder: string = 'angulinho';
 }
