@@ -14,4 +14,8 @@ export class HeroesComponent {
     label: 'Comprar',
   };
   @Input() placeholder: string = '';
+
+  getAlert(input: string) {
+    alert(input);
+  }
 }
