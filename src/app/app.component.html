@@ -1,7 +1,6 @@
 <div class="content">
-  <app-heroes></app-heroes>
-  <input placeholder="{{ buttonPlaceholder }}" />
-  <app-entry-data></app-entry-data>
-  <app-using-pipes></app-using-pipes>
+  <input type="text" (input)="handleInput($event)" />
+  <p>You entered {{ value1 }}</p>
+  <app-some-component nome="sla porra"></app-some-component>
+  <app-some-component nome="alahu akbar"></app-some-component>
 </div>
-<router-outlet></router-outlet>

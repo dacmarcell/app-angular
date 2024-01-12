@@ -1,23 +1,27 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { HeroesComponent } from './heroes/heroes.component';
-import { EntryDataComponent } from './entry-data/entry-data.component';
-import { UsingPipesComponent } from './using-pipes/using-pipes.component';
+import { SomeComponentComponent } from './some-component/some-component.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    CommonModule,
-    RouterOutlet,
-    HeroesComponent,
-    EntryDataComponent,
-    UsingPipesComponent,
-  ],
+  imports: [CommonModule, RouterOutlet, SomeComponentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'app-angular';
-  buttonPlaceholder: string = 'angulinho';
+export class AppComponent implements OnInit {
+  value1: string = 'yash';
+  ngOnInit(): void {
+    console.log('Hello World ngOnInit');
+  }
+
+  handleInput(event: Event) {
+    this.value1 = (event.target as HTMLInputElement).value;
+  }
 }
