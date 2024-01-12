@@ -1,1 +1,24 @@
-<p>entry-data works!</p>
+<input [(ngModel)]="CustomerModel.CustomerCode" type="text" /><br />
+<p>Customer Name:</p>
+<input
+  [(ngModel)]="CustomerModel.CustomerName"
+  type="text"
+  aria-label="CustomerName"
+/><br />
+<p [style.color]="color">Customer Amount:</p>
+<input
+  [(ngModel)]="CustomerModel.CustomerAmount"
+  type="number"
+  aria-label="Customer Amount"
+/><br />
+<input type="button" value="Add" /><br />
+{{ CustomerModel.CustomerCode }}<br />
+{{ CustomerModel.CustomerName }}<br />
+{{ CustomerModel.CustomerAmount }}<br />
+<table>
+  <tr>
+    <td>Customer Code</td>
+    <td>Customer Name</td>
+    <td>Customer Amount</td>
+  </tr>
+</table>
